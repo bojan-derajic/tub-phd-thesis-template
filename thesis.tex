@@ -1,0 +1,127 @@
+%% ============================================================
+%% TU Berlin PhD Thesis
+%% Faculty IV — Electrical Engineering and Computer Science
+%% ============================================================
+
+\documentclass[
+  12pt,
+  a4paper,
+  twoside,
+  openright,
+  BCOR=12mm,        % binding correction
+  DIV=12,           % text area (higher = wider)
+  bibliography=totoc,
+  listof=totoc,
+  headings=normal,
+]{scrbook}
+
+%% ---- Thesis Metadata (edit here) --------------------------
+\newcommand{\thesisTitle}{Your Thesis Title}
+\newcommand{\thesisAuthor}{Your Name}
+\newcommand{\thesisAuthorDegree}{M.\,Sc.}     % pre-PhD degree
+\newcommand{\thesisORCID}{}                    % optional; leave empty to omit
+\newcommand{\thesisFaculty}{Fakultät IV -- Elektrotechnik und Informatik}
+\newcommand{\thesisDoctoralDegree}{Doktor der Ingenieurwissenschaften}
+\newcommand{\thesisDoctoralDegreeAbbrev}{Dr.-Ing.}
+\newcommand{\thesisChairperson}{Prof.\,Dr. Name}
+\newcommand{\thesisReviewerA}{Prof.\,Dr. Name}    % Gutachter
+\newcommand{\thesisReviewerB}{Prof.\,Dr. Name}    % Gutachterin/Gutachter
+\newcommand{\thesisDefenseDate}{DD. Month YYYY}
+\newcommand{\thesisYear}{YYYY}
+\newcommand{\thesisKeywords}{keyword1, keyword2, keyword3}
+
+%% ---- Encoding & Language ----------------------------------
+\usepackage[T1]{fontenc}       % required for correct ligatures & copying from PDF
+\usepackage[utf8]{inputenc}
+\usepackage[main=english, ngerman]{babel}
+
+%% ---- Fonts & Typography -----------------------------------
+\usepackage{lmodern}
+\usepackage{microtype}
+
+%% ---- Mathematics ------------------------------------------
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+
+%% ---- Graphics ---------------------------------------------
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+
+%% ---- Tables -----------------------------------------------
+\usepackage{booktabs}
+
+%% ---- SI Units ---------------------------------------------
+\usepackage{siunitx}
+
+%% ---- Bibliography -----------------------------------------
+\usepackage[
+  backend=biber,
+  style=numeric,
+  sorting=none,
+  doi=true,
+  isbn=false,
+  url=false,
+  eprint=false,
+]{biblatex}
+\addbibresource{references.bib}
+
+%% ---- Quotes (required by biblatex + babel) ----------------
+\usepackage{csquotes}
+
+%% ---- PDF Metadata & Hyperlinks ----------------------------
+%% For PDF/A submission, add \usepackage[a-2b]{pdfx} before hyperref.
+%% See TU Berlin library guidelines: https://www.ub.tu-berlin.de
+\usepackage[
+  bookmarks=true,
+  bookmarksopen=true,
+  bookmarksopenlevel=1,
+  pdfpagelayout=SinglePage,
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=black,
+  urlcolor=black,
+]{hyperref}
+\usepackage{hyperxmp}
+%% cleveref must be loaded after hyperref
+\usepackage[capitalise, noabbrev]{cleveref}
+\hypersetup{
+  pdftitle    = {\thesisTitle},
+  pdfauthor   = {\thesisAuthor},
+  pdfkeywords = {\thesisKeywords},
+  pdflang     = {en},
+}
+
+%% ===========================================================
+\begin{document}
+
+%% ---- Front Matter -----------------------------------------
+\frontmatter
+
+\include{titlepage}
+\include{chapters/abstract}
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+%% ---- Main Matter ------------------------------------------
+\mainmatter
+
+\include{chapters/ch01_introduction}
+\include{chapters/ch02_background}
+% Add chapters here:
+% \include{chapters/ch03_methods}
+% \include{chapters/ch04_results}
+% \include{chapters/ch05_conclusion}
+
+%% ---- Appendix ---------------------------------------------
+\appendix
+\include{appendix/app_a}
+
+%% ---- Back Matter ------------------------------------------
+\backmatter
+
+\printbibliography
+
+\end{document}

@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(apt-file update:*)",
+      "Bash(apt-cache show:*)",
+      "Bash(apt-get update:*)",
+      "Bash(grep -v \"^--$\")"
+    ]
+  }
+}
