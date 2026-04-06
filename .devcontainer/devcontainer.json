@@ -10,7 +10,8 @@
     "vscode": {
       "extensions": [
         "james-yu.latex-workshop",
-        "Anthropic.claude-code"
+        "Anthropic.claude-code",
+        "ms-vscode.makefile-tools"
       ],
       "settings": {
         // Use latexmk as the single build recipe (handles biber automatically)
@@ -30,6 +31,7 @@
               "-pdf",
               "-interaction=nonstopmode",
               "-synctex=1",
+              "-output-directory=build",
               "%DOC%"
             ]
           }
