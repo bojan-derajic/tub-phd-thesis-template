@@ -1,0 +1,44 @@
+{
+  "name": "Thesis",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "."
+  },
+  "workspaceFolder": "/workspaces/thesis",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/thesis,type=bind",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "james-yu.latex-workshop",
+        "Anthropic.claude-code",
+        "ms-vscode.makefile-tools"
+      ],
+      "settings": {
+        // Use latexmk as the single build recipe (handles biber automatically)
+        "latex-workshop.latex.recipes": [
+          {
+            "name": "latexmk",
+            "tools": [
+              "latexmk"
+            ]
+          }
+        ],
+        "latex-workshop.latex.tools": [
+          {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+              "-pdf",
+              "-interaction=nonstopmode",
+              "-synctex=1",
+              "-output-directory=build",
+              "%DOC%"
+            ]
+          }
+        ],
+        "latex-workshop.latex.autoBuild.run": "onSave",
+        "latex-workshop.view.pdf.viewer": "tab"
+      }
+    }
+  }
+}

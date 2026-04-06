@@ -1,0 +1,21 @@
+## Build output directory (all LaTeX temp files go here via Makefile)
+build/
+
+## LaTeX temp files that land in the root (e.g. from VS Code latex-workshop)
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+
+## VS Code personal state (settings.json is tracked)
+.vscode/
+.claude/
