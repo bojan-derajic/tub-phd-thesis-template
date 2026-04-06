@@ -10,7 +10,6 @@
     "vscode": {
       "extensions": [
         "james-yu.latex-workshop",
-        "Anthropic.claude-code",
         "ms-vscode.makefile-tools"
       ],
       "settings": {
