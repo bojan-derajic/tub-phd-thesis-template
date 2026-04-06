@@ -1,16 +1,21 @@
 # TU Berlin PhD Thesis Template
 
-A LaTeX dissertation template for TU Berlin, Faculty IV — Electrical Engineering and Computer Science. Produces a two-sided A4 PDF using KOMA-Script (`scrbook`), with a compliant German title page and support for both English and German abstracts.
+A minimalistic LaTeX dissertation template for TU Berlin, Faculty IV — Electrical Engineering and Computer Science. Produces a two-sided A4 PDF using KOMA-Script (`scrbook`), with a compliant German title page and support for both English and German abstracts.
 
-## Requirements
+## Instructions
 
-Either use the included Dev Container (recommended) or install the dependencies manually.
+The template can be used in three different ways:
 
-**Dev Container** — requires Docker and VS Code with the Dev Containers extension. Open the repository and select *Reopen in Container*. The container provides:
+### Overleaf
+Simply upload the template as a new Overleaf project and the template is ready to use.
+
+### Dev Container
+Requires Docker and VS Code with the Dev Containers extension. Open the repository and select *Reopen in Container*. The container provides:
 - TeX Live (full science/extra packages, biber, latexmk)
-- VS Code extensions: LaTeX Workshop (auto-build on save), Makefile Tools, Claude Code
+- VS Code extensions: LaTeX Workshop (auto-build on save), Makefile Tools
 
-**Manual install** — Ubuntu/Debian:
+### Ubuntu/Debian machine
+To install necessary requirements on Ubuntu/Debian run:
 ```
 sudo apt install texlive-latex-extra texlive-fonts-recommended \
   texlive-lang-german texlive-science texlive-bibtex-extra \
