@@ -10,7 +10,7 @@
     "vscode": {
       "extensions": [
         "james-yu.latex-workshop",
-        "ms-vscode.makefile-tools"
+        "ms-vscode.makefile-tools",
       ],
       "settings": {
         // Use latexmk as the single build recipe (handles biber automatically)
@@ -18,7 +18,8 @@
           {
             "name": "latexmk",
             "tools": [
-              "latexmk"
+              "latexmk",
+              "copy-pdf"
             ]
           }
         ],
@@ -33,10 +34,19 @@
               "-output-directory=build",
               "%DOC%"
             ]
+          },
+          {
+            "name": "copy-pdf",
+            "command": "cp",
+            "args": [
+              "build/%DOCFILE%.pdf",
+              "."
+            ]
           }
         ],
         "latex-workshop.latex.autoBuild.run": "onSave",
-        "latex-workshop.view.pdf.viewer": "tab"
+        "latex-workshop.view.pdf.viewer": "tab",
+        "latex-workshop.formatting.latex": "latexindent"
       }
     }
   }
