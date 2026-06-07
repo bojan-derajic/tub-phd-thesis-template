@@ -6,6 +6,7 @@
   },
   "workspaceFolder": "/workspaces/thesis",
   "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/thesis,type=bind",
+  "remoteUser": "vscode",
   "customizations": {
     "vscode": {
       "extensions": [
