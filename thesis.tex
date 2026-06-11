@@ -53,6 +53,15 @@
 \usepackage{graphicx}
 \graphicspath{{figures/}}
 
+%% ---- Caption formatting -----------------------------------
+\usepackage{caption}
+\captionsetup{
+  format   = plain,   % full-width paragraph, not hanging indent
+  labelsep = colon,   % "Figure 1.1: " not "Figure 1.1. "
+}
+\renewcommand*{\figureformat}{\figurename~\thefigure}  % remove KOMA's trailing period
+\renewcommand*{\tableformat}{\tablename~\thetable}     % same for tables
+
 %% ---- Tables -----------------------------------------------
 \usepackage{booktabs}
 
